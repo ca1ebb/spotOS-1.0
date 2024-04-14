@@ -15,11 +15,27 @@
             border: none; 
         }
 
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    body {
+        background-size: contain; /* Adjust to 'contain' for smaller screens */
+        background-position: center; /* Center the background image */
+    }
+}
+
+/* Adjustments for larger screens */
+@media screen and (min-width: 1200px) {
+    body {
+        background-size: cover; /* Adjust back to 'cover' for larger screens */
+    }
+}
+
         #clock {
             font-size: 180px;
             color: white;
             font-family: 'SF Pro Display', sans-serif;
-            font-weight: bold;
+            font-weight: px;
             text-align: center;
         }
 
@@ -27,7 +43,7 @@
             font-size: 30px;
             color: white;
             font-family: 'SF Pro Display', sans-serif;
-            font-weight: bold;
+            font-weight: ;
             text-align: center;
         }
 
@@ -193,9 +209,211 @@
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
   }
+
+ .popup4 {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #1A1A1A;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.2s;
+            border-radius: 20px;
+            width: 500px;
+            height: 500px;
+            border: none;
+        }
+
+        .overlay4 {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+        }
+
+ .popup5 {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #1A1A1A;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.2s;
+            border-radius: 20px;
+            width: 500px;
+            height: 500px;
+            border: none;
+        }
+
+        .overlay5 {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+        }
+ .popup6 {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #1A1A1A;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.2s;
+            border-radius: 20px;
+            width: 500px;
+            height: 500px;
+            border: none;
+        }
+
+        .overlay6 {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+        }
+
+ .popup7 {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #1A1A1A;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.2s;
+            border-radius: 20px;
+            width: 500px;
+            height: 500px;
+            border: none;
+        }
+
+        .overlay7 {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+        }
+.settings
+{
+position: relative; 
+top: 70px; 
+width: 500px; 
+height: 80px;
+ border-radius: 15px;
+z-index: 9998;
+background: #383838;
+border: none;
+color:white;
+text-size:50px;
+
+}
+  .text-inside {
+        position: absolute; /* Make the text position absolute */
+        top: 40px; /* Position the text vertically in the middle */
+        left: 60px; /* Position the text horizontally in the middle */
+        transform: translate(-50%, -50%); /* Center the text */
+font-size: 30px;
+font-family: 'SF Pro Display', sans-serif;
+
+    }
+ .close {
+        position: absolute; /* Position the close button */
+        top: 25px; /* Distance from top */
+        right: 20px; /* Distance from right */
+        cursor: pointer; /* Cursor style */
+color: #2562FA;
+font-size: 30px; 
+    }
+ .close2 {
+        position: absolute; /* Position the close button */
+        top: 25px; /* Distance from top */
+        right: 20px; /* Distance from right */
+        cursor: pointer; /* Cursor style */
+color: #2562FA;
+font-size: 30px; 
+    }
+
+ .close3 {
+        position: absolute; /* Position the close button */
+        top: 25px; /* Distance from top */
+        right: 20px; /* Distance from right */
+        cursor: pointer; /* Cursor style */
+color: #2562FA;
+font-size: 30px; 
+    }
+
+.erase {
+        display: inline-block;
+        padding: 10px 20px; /* Adjust padding as needed */
+        background-color: transparent;
+text-decoration: none;
+        color: #2562FA;
+font-size: 30px;
+            }
+
+ .wetdiv {
+            position: absolute;
+            top: 350px;
+            left: 790px;
+            display: table;
+            min-width: 200px;
+            z-index: 9;
+            background-color: #f1f1f1;
+            text-align: center;
+            border: 1px solid #d3d3d3;
+            cursor: move;
+        }
+
+.ap {
+  border: none;
+height: 220px;
+  border-radius: 20px;
+  background-color: #383838;    
+  text-align: center;
+}
+
+.api1 {
+position: relative;
+border-radius: 14px;
+height: 140px;
+width: 210px;
+left: -140px;
+top: 20px;
+ }
+
+.api2 {
+position: absolute;
+border-radius: 14px;
+height: 140px;
+width: 210px;
+left: 280px;
+top: 116px;
+ }
     </style>
 </head>
 <body>
+
+
+
     <br>
     <div id="date"></div>
     <div id="clock"></div>
@@ -227,23 +445,33 @@
 
     </div>
 
+  <div style="background: rgba(45, 45, 45, 0.50); height: 200px; border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
+    border: none;" class="wetdiv">
+
+  
+
+
+</div>
     <div class="overlay2" id="overlay2"></div>
     <div class="popup2" id="popup2">
         <h1>Settings</h1>
-      
-        <br>
-        <br>
-<BR>
-        <h2>Software Update</h2>
-        <h3>Your HomeSpot is up to date</h3>
+<button id="openBtn4" class="settings">
+
+  <span class="text-inside">General</span>
+<br>
+<button style="position: relative; top: 80px; left: 1px; " id="openBtn5" class="settings">
+  <span class="text-inside">‎‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎Software Update</span>
+<button style="position: relative; top: 90px; left: 1px; " id="openBtn6" class="settings">
+  <span class="text-inside">‎‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎‎Transfer or Reset</span>
+<button style="position: relative; top: 100px; left: 1px; " id="openBtn7" class="settings">
+  <span class="text-inside">‎‎‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎Appearance</span>
 
 
-  <h2 style="font-size: 35px;">About</h2>
-<h2>Version</h2><h3>1.0</h3>
-<h2>Model Name</h2><h3>HomeSpot (1st Generation)</h3>
-<h2>Reset</h2>
- <button onclick="detectAirPlayDevices()">ERASE ALL CONTENT AND SETTINGS (INACTIVE BETA)</button>
-    </div>
+
+
+
+          </div>
 
    <div class="overlay3" id="overlay3"></div>
     <div class="popup3" id="popup3">
@@ -253,7 +481,7 @@
 <BR>
 <BR>
 
- <h2>Dynamic</h2>
+ <h2>Collections</h2>
 ‎ ‎ ‎ ‎ ‎<img src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/bg.jpg" class="image-button" data-src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/bg.jpg">
         <img src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/lala.jpg" class="image-button" data-src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/lala.jpg">
 <img src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/mnt.jpg" class="image-button" data-src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/mnt.jpg">
@@ -272,6 +500,83 @@
         <br>
        </div>
     </div>
+
+<div class="overlay4" id="overlay4"></div>
+    <div class="popup4" id="popup4">
+     
+        <h1>General</h1>
+  <span class="close" onclick="closePopup()">Back</span> <!-- Close button -->
+<BR>
+<br>
+<BR>
+<BR>
+<h2>spotOS Version</h2>
+<h3>1.0</h3>
+<BR>
+<BR>
+<h2>Model Number</h2>
+<h3>HS1875P</h3>
+<BR>
+<BR>
+<h2>Serial Number</h2>
+<h3>18361937183629173</h3>
+
+
+
+        <br>
+       </div>
+    </div>
+<div class="overlay5" id="overlay5"></div>
+    <div class="popup5" id="popup5">
+     
+        <h1>Software Update</h1>
+<span class="close2" onclick="closePopup2()">Back</span> <!-- Close button -->
+
+<h3 style="position: relative; top: 45%; left:25%;">Your HomeSpot is up to date</h3>
+
+       </div>
+    </div>
+
+<div class="overlay6" id="overlay6"></div>
+    <div class="popup6" id="popup6">
+     
+        <h1>Transfer or Reset</h1>
+<span class="close3" onclick="closePopup3()">Back</span> <!-- Close button -->
+<BR>
+<BR>
+<BR>
+<ol><h2>ㅤㅤPrepare for a new HomeSpot</h2></ol>
+
+<ol><h3>Erasing all content and settings will erase this HomeSpot and all data will be removed. This  ㅤㅤㅤㅤㅤㅤㅤㅤㅤaction can not be undone.</h3> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a href="https://www.example.com" class="erase">Erase all Content and Settings</a>
+       </div>
+    </div>
+
+<div class="overlay7" id="overlay7"></div>
+    <div class="popup7" id="popup7">
+     
+        <h1>Appearance</h1>
+
+<span class="close3" onclick="closePopup4()">Back</span> <!-- Close button -->
+<br>
+<br>
+<br>
+<br>
+<div class="ap">
+  <OL><img src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/light.jpg" alt="Popup Button" id="changeColorButton2" class="api1">  
+ <OL><img src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/dark.jpg" alt="Popup Button" id="changeColorButton" class="api2">  
+</div>
+<h2 style="position: absolute; left: 120px; top: 250px;">Light</h2>
+<h2 style="position: absolute; left: 370px; top: 250px;">Dark</h2>
+       </div>
+    </div>
+
     <script>
         function updateTime() {
             var now = new Date();
@@ -373,6 +678,62 @@ openBtn3.addEventListener('click', function() {
         overlay3.style.opacity = '1';
     }, 10);
 });
+// For the third popup
+const openBtn4 = document.getElementById('openBtn4');
+const popup4 = document.getElementById('popup4');
+const overlay4 = document.getElementById('overlay4');
+
+openBtn4.addEventListener('click', function() {
+    popup4.style.display = 'block';
+    overlay4.style.display = 'block';
+    setTimeout(function() {
+        popup4.style.opacity = '1';
+        overlay4.style.opacity = '1';
+    }, 10);
+});
+// For the third popup
+const openBtn5 = document.getElementById('openBtn5');
+const popup5 = document.getElementById('popup5');
+const overlay5 = document.getElementById('overlay5');
+
+openBtn5.addEventListener('click', function() {
+    popup5.style.display = 'block';
+    overlay5.style.display = 'block';
+    setTimeout(function() {
+        popup5.style.opacity = '1';
+        overlay5.style.opacity = '1';
+    }, 10);
+});
+
+// For the third popup
+const openBtn6 = document.getElementById('openBtn6');
+const popup6 = document.getElementById('popup6');
+const overlay6 = document.getElementById('overlay6');
+
+openBtn6.addEventListener('click', function() {
+    popup6.style.display = 'block';
+    overlay6.style.display = 'block';
+    setTimeout(function() {
+        popup6.style.opacity = '1';
+        overlay6.style.opacity = '1';
+    }, 10);
+});
+
+// For the third popup
+const openBtn7 = document.getElementById('openBtn7');
+const popup7 = document.getElementById('popup7');
+const overlay7 = document.getElementById('overlay7');
+
+openBtn7.addEventListener('click', function() {
+    popup7.style.display = 'block';
+    overlay7.style.display = 'block';
+    setTimeout(function() {
+        popup7.style.opacity = '1';
+        overlay7.style.opacity = '1';
+    }, 10);
+});
+
+
 
         overlay.addEventListener('click', function(e) {
             popup.style.opacity = '0';
@@ -391,6 +752,106 @@ overlay3.addEventListener('click', function(e) {
                 overlay3.style.display = 'none';
             }, 500);
         });
+overlay4.addEventListener('click', function(e) {
+            popup4.style.opacity = '0';
+            overlay4.style.opacity = '0';
+            setTimeout(function() {
+                popup4.style.display = 'none';
+                overlay4.style.display = 'none';
+            }, 500);
+        });
+overlay5.addEventListener('click', function(e) {
+            popup5.style.opacity = '0';
+            overlay5.style.opacity = '0';
+            setTimeout(function() {
+                popup5.style.display = 'none';
+                overlay5.style.display = 'none';
+            }, 500);
+        });
+  
+overlay6.addEventListener('click', function(e) {
+            popup6.style.opacity = '0';
+            overlay6.style.opacity = '0';
+            setTimeout(function() {
+                popup6.style.display = 'none';
+                overlay6.style.display = 'none';
+            }, 500);
+        });
+
+overlay7.addEventListener('click', function(e) {
+            popup7.style.opacity = '0';
+            overlay7.style.opacity = '0';
+            setTimeout(function() {
+                popup7.style.display = 'none';
+                overlay7.style.display = 'none';
+            }, 500);
+        });
+
+
+   function openPopup() {
+        document.getElementById("popup4").style.display = "block";
+        document.getElementById("overlay4").style.display = "block";
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById("popup4").style.display = "none";
+        document.getElementById("overlay4").style.display = "none";
+    }
+
+    // Function to prevent closing the popup when clicking on it
+    document.getElementById("popup4").onclick = function(event) {
+        event.stopPropagation();
+  
+        };
+
+
+  function openPopup() {
+        document.getElementById("popup5").style.display = "block";
+        document.getElementById("overlay5").style.display = "block";
+    }
+
+    // Function to close the popup
+    function closePopup2() {
+        document.getElementById("popup5").style.display = "none";
+        document.getElementById("overlay5").style.display = "none";
+    }
+
+    // Function to prevent closing the popup when clicking on it
+    document.getElementById("popup5").onclick = function(event) {
+        event.stopPropagation();
+    };
+
+
+
+  function openPopup() {
+        document.getElementById("popup6").style.display = "block";
+        document.getElementById("overlay6").style.display = "block";
+    }
+
+    // Function to close the popup
+    function closePopup3() {
+        document.getElementById("popup6").style.display = "none";
+        document.getElementById("overlay6").style.display = "none";
+    }
+
+    // Function to prevent closing the popup when clicking on it
+    document.getElementById("popup6").onclick = function(event) {
+        event.stopPropagation();
+    };
+
+// Function to close the popup
+    function closePopup4() {
+        document.getElementById("popup7").style.display = "none";
+        document.getElementById("overlay7").style.display = "none";
+    }
+
+    // Function to prevent closing the popup when clicking on it
+    document.getElementById("popup7").onclick = function(event) {
+        event.stopPropagation();
+    };
+
+
 
 
         imageButtons.forEach(function(button) {
@@ -422,6 +883,76 @@ updateBatteryInfo();
 
 // Update battery info every second
 setInterval(updateBatteryInfo, 1000);
+
+const changeColorButton = document.getElementById('changeColorButton'); // Changed the variable name to changeColorButton
+changeColorButton.addEventListener('click', function() {
+    // Change the color of all popups to blue
+    const popups = document.querySelectorAll('.popup, .popup2, .popup3, .popup4, .popup5, .popup6, .popup7');
+    popups.forEach(function(popup) {
+        popup.style.backgroundColor = '#1A1A1A';
+
+        // Change the color of h1 and h2 inside the popup to a different color
+        const h1Elements = popup.querySelectorAll('h1');
+        h1Elements.forEach(function(h1) {
+            h1.style.color = 'white'; // Change this to any color you want for h1
+        });
+
+        const h2Elements = popup.querySelectorAll('h2');
+        h2Elements.forEach(function(h2) {
+            h2.style.color = 'white'; // Change this to any color you want for h2
+        });
+    });
+
+    // Change the color of text inside .settings to a different color
+    const settingsPopups = document.querySelectorAll('.settings'); // Select all elements with .settings class
+    settingsPopups.forEach(function(settingsPopup) {
+        settingsPopup.style.color = 'white'; // Change this to any color you want for text inside .settings
+        settingsPopup.style.backgroundColor = '#383838'; // Change this to any color you want for .settings background
+    });
+
+   // Change the color of text inside .ap to a different color
+    const apDivs = document.querySelectorAll('.ap'); // Select all elements with .ap class
+    apDivs.forEach(function(apDiv) {
+        apDiv.style.color = 'white'; // Change this to any color you want for text inside .ap
+        apDiv.style.backgroundColor = '#383838'; // Change this to any color you want for .ap background
+    });
+});
+
+const changeColorButton2 = document.getElementById('changeColorButton2'); // Changed the variable name to changeColorButton2
+changeColorButton2.addEventListener('click', function() {
+    // Change the color of all popups to red
+    const popups = document.querySelectorAll('.popup, .popup2, .popup3, .popup4, .popup5, .popup6, .popup7');
+    popups.forEach(function(popup) {
+        popup.style.backgroundColor = '#F1F1F1';
+
+        // Change the color of h1 and h2 inside the popup to a different color
+        const h1Elements = popup.querySelectorAll('h1');
+        h1Elements.forEach(function(h1) {
+            h1.style.color = 'black'; // Change this to any color you want for h1
+        });
+
+        const h2Elements = popup.querySelectorAll('h2');
+        h2Elements.forEach(function(h2) {
+            h2.style.color = 'black'; // Change this to any color you want for h2
+        });
+    });
+
+    // Change the color of text inside .settings to a different color
+    const settingsPopups = document.querySelectorAll('.settings'); // Select all elements with .settings class
+    settingsPopups.forEach(function(settingsPopup) {
+        settingsPopup.style.color = 'black'; // Change this to any color you want for text inside .settings
+        settingsPopup.style.backgroundColor = '#D4D4D4'; // Change this to any color you want for .settings background
+    });
+
+   // Change the color of text inside .ap to a different color
+    const apDivs = document.querySelectorAll('.ap'); // Select all elements with .ap class
+    apDivs.forEach(function(apDiv) {
+        apDiv.style.color = 'white'; // Change this to any color you want for text inside .ap
+        apDiv.style.backgroundColor = '#D4D4D4'; // Change this to any color you want for .ap background
+    });
+});
+
+
     </script>
 </body>
 </html>
