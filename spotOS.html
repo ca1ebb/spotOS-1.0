@@ -477,6 +477,9 @@ top: 116px;
   <div style="background: rgba(45, 45, 45, 0.50); height: 200px; border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
     border: none;" class="wetdiv">
+   <div style="color: white; font-size: 20px; position: absolute; top: 9%; left: 10%;"  id="city-display"></div>
+    <div id="weather-info"></div>
+
 
   
 
@@ -981,7 +984,75 @@ changeColorButton2.addEventListener('click', function() {
     });
 });
 
+ window.onload = function() {
+    const accessToken = 'c2549c10f1e1af'; // Replace 'YOUR_ACCESS_TOKEN' with your actual access token
+    
+    fetch('https://ipinfo.io/json', {
+        headers: {
+            'Authorization': `Bearer ${accessToken}`
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        const city = data.city;
+        document.getElementById('city-display').innerText = city;
+    })
+    .catch(error => {
+        console.error('Error fetching location:', error);
+    });
+};
 
+   // Function to get user's location based on IP address
+        function getUserLocation() {
+            const accessToken = 'c2549c10f1e1af';
+    return fetch('https://ipinfo.io/json', {
+        headers: {
+            'Authorization': `Bearer ${accessToken}`
+        }
+    })
+    .then(response => response.json())
+    .then(data => data.city);
+
+        }
+
+        // Replace 'YOUR_API_KEY' with your actual API key
+        const apiKey = '270ed85119d546c0a9872218242303';
+
+        function updateWeather() {
+            getUserLocation()
+                .then(city => {
+                    // Fetch weather data based on user's location
+                    fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&units=imperial`)
+                        .then(response => response.json())
+                        .then(data => {
+                            const weatherInfo = document.getElementById('weather-info');
+                            const { temp_f, condition, humidity } = data.current;
+                            const { maxtemp_f, mintemp_f } = data.forecast.forecastday[0].day;
+                            const roundedTemp = Math.round(temp_f);
+                            const roundedMaxTemp = Math.round(maxtemp_f);
+                            const roundedMinTemp = Math.round(mintemp_f);
+                            weatherInfo.innerHTML = `
+                                <p style="color: white; position: absolute; font-size: 50px; top: -5%; left: 14%;">${roundedTemp}°</p>
+                                <p style="color: white; position: absolute; font-size: 15px; top: 80%; left: 14%;"> H: ${roundedMaxTemp}°</p>
+                                <p style="color: white; position: absolute; font-size: 15px; top: 80%; left: 40%;">L:${roundedMinTemp}°</p>
+                                <p style="color: white; position: absolute; font-size: 20px; top: 63%; left: 13.3%;">${condition.text}</p>
+                               
+                            `;
+                        })
+                        .catch(error => {
+                            console.error('Error fetching weather data:', error);
+                        });
+                })
+                .catch(error => {
+                    console.error('Error fetching user location:', error);
+                });
+        }
+
+        // Initial weather update
+        updateWeather();
+
+        // Update weather every second
+        setInterval(updateWeather, 1000);
     </script>
 </body>
 </html>
