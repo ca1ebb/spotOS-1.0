@@ -984,7 +984,7 @@ changeColorButton2.addEventListener('click', function() {
     });
 });
 
- window.onload = function() {
+  function updateCityName() {
     const accessToken = 'c2549c10f1e1af'; // Replace 'YOUR_ACCESS_TOKEN' with your actual access token
     
     fetch('https://ipinfo.io/json', {
@@ -1032,8 +1032,8 @@ changeColorButton2.addEventListener('click', function() {
                             const roundedMaxTemp = Math.round(maxtemp_f);
                             const roundedMinTemp = Math.round(mintemp_f);
                             weatherInfo.innerHTML = `
-                                <p style="color: white; position: absolute; font-size: 50px; top: -5%; left: 14%;">${roundedTemp}°</p>
-                                <p style="color: white; position: absolute; font-size: 15px; top: 80%; left: 14%;"> H: ${roundedMaxTemp}°</p>
+                                <p style="color: white; position: absolute; font-size: 50px; top: -5%; left: 11%;">${roundedTemp}°</p>
+                                <p style="color: white; position: absolute; font-size: 15px; top: 80%; left: 13.3%;"> H: ${roundedMaxTemp}°</p>
                                 <p style="color: white; position: absolute; font-size: 15px; top: 80%; left: 40%;">L:${roundedMinTemp}°</p>
                                 <p style="color: white; position: absolute; font-size: 20px; top: 63%; left: 13.3%;">${condition.text}</p>
                                
@@ -1053,6 +1053,12 @@ changeColorButton2.addEventListener('click', function() {
 
         // Update weather every second
         setInterval(updateWeather, 1000);
+     
+
+ updateCityName();
+
+        // Refresh city name every second
+        setInterval(updateCityName, 1000);
     </script>
 </body>
 </html>
