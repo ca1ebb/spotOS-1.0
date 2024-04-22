@@ -983,28 +983,28 @@ changeColorButton2.addEventListener('click', function() {
         apDiv.style.backgroundColor = '#D4D4D4'; // Change this to any color you want for .ap background
     });
 });
-
   function updateCityName() {
-    const accessToken = 'c2549c10f1e1af'; // Replace 'YOUR_ACCESS_TOKEN' with your actual access token
-    
-    fetch('https://ipinfo.io/json', {
-        headers: {
-            'Authorization': `Bearer ${accessToken}`
+            // Fetch the user's location using ipinfo.io with your access token
+            fetch('https://ipinfo.io/json?token=287532b89b47e5')
+                .then(response => response.json())
+                .then(data => {
+                    // Extract the city name from the response
+                    const city = data.city;
+                    
+                    // Display the city name on the page
+                    document.getElementById('city-display').innerText = city;
+                })
+                .catch(error => {
+                    console.error('Error fetching location:', error);
+                });
         }
-    })
-    .then(response => response.json())
-    .then(data => {
-        const city = data.city;
-        document.getElementById('city-display').innerText = city;
-    })
-    .catch(error => {
-        console.error('Error fetching location:', error);
-    });
-};
+
+  // Call updateCityName function initially
+        updateCityName();
 
    // Function to get user's location based on IP address
         function getUserLocation() {
-            const accessToken = 'c2549c10f1e1af';
+            const accessToken = '287532b89b47e5';
     return fetch('https://ipinfo.io/json', {
         headers: {
             'Authorization': `Bearer ${accessToken}`
@@ -1048,17 +1048,9 @@ changeColorButton2.addEventListener('click', function() {
                 });
         }
 
-        // Initial weather update
+
+   // Initial weather update
         updateWeather();
-
-        // Update weather every second
-        setInterval(updateWeather, 1000);
-     
-
- updateCityName();
-
-        // Refresh city name every second
-        setInterval(updateCityName, 1000);
     </script>
 </body>
 </html>
