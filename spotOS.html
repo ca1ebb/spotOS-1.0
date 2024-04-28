@@ -1018,7 +1018,7 @@ changeColorButton2.addEventListener('click', function() {
         // Replace 'YOUR_API_KEY' with your actual API key
         const apiKey = '270ed85119d546c0a9872218242303';
 
-    function updateWeather() {
+   function updateWeather() {
     getUserLocation()
         .then(city => {
             // Fetch weather data based on user's location
@@ -1035,10 +1035,88 @@ changeColorButton2.addEventListener('click', function() {
 
                     // Change condition text if it's "moderate or heavy rain with thunder"
                     if (conditionText === "Moderate or heavy rain with thunder") {
-                        conditionText = "Thunderstorm";
+                        conditionText = "Thunderstorm ";
                     }
                      if (conditionText === "Overcast") {
                         conditionText = "Cloudy";
+                    }
+                     if (conditionText === "Moderate or heavy rain showers") {
+                        conditionText = "Rain";
+                    }
+                     if (conditionText === "Light snow showers") {
+                        conditionText = "Snow";
+                    }
+                     if (conditionText === "Moderate or heavy snow showers") {
+                        conditionText = "Snow";
+                    }
+                     if (conditionText === "Moderate or heavy rain") {
+                        conditionText = "Heavy Rain ";
+                    }
+                     if (conditionText === "Moderate or heavy snow") {
+                        conditionText = "Heavy Snow";
+                    }
+                     if (conditionText === "Moderate or heavy drizzle") {
+                        conditionText = "Drizzle";
+                    }
+                     if (conditionText === "Ice pellets") {
+                        conditionText = "Sleet";
+                    }
+                     if (conditionText === "Moderate or heavy sleet") {
+                        conditionText = "Heavy Sleet";
+                    }
+                     if (conditionText === "Thunderstorm with light rain showers") {
+                        conditionText = "Thunderstorm";
+                    }
+                     if (conditionText === "Thunderstorm with moderate or heavy rain showers") {
+                        conditionText = "Thunderstorm";
+                    }
+                     if (conditionText === "Thunderstorm with light rain") {
+                        conditionText = "Thunderstorm";
+                    }
+                     if (conditionText === "Thunderstorm with moderate or heavy rain") {
+                        conditionText = "Thunderstorm";
+                    }
+                     if (conditionText === "Thunderstorm with light snow showers") {
+                        conditionText = "Thunderstorm";
+                    }
+                     if (conditionText === "Thunderstorm with moderate or heavy snow showers") {
+                        conditionText = "Thunderstorm";
+                    }
+                     if (conditionText === "Thunderstorm with light snow") {
+                        conditionText = "Thunderstorm";
+                    }
+                     if (conditionText === "Thunderstorm with moderate or heavy snow") {
+                        conditionText = "Thunderstorm";
+                    }
+                     if (conditionText === "Patchy light rain with thunder") {
+                        conditionText = "Rain";
+                    }
+                     if (conditionText === "Patchy moderate or heavy rain with thunder") {
+                        conditionText = "Rain";
+                    }
+                     if (conditionText === "Patchy light snow with thunder") {
+                        conditionText = "Snow";
+                    }
+                     if (conditionText === "Patchy moderate or heavy snow with thunder") {
+                        conditionText = "Snow";
+                    }
+                     if (conditionText === "Freezing drizzle") {
+                        conditionText = "Sleet";
+                    }
+                     if (conditionText === "Heavy freezing drizzle") {
+                        conditionText = "Heavy Sleet";
+                    }
+                     if (conditionText === "Patchy light drizzle") {
+                        conditionText = "Light Sleet";
+                    }
+                     if (conditionText === "Patchy moderate or heavy drizzle") {
+                        conditionText = "Sleet";
+                    }
+
+
+                    // Limit condition text to 14 characters including spaces
+                    if (conditionText.length > 14) {
+                        conditionText = conditionText.substring(0, 14);
                     }
 
                     weatherInfo.innerHTML = `
