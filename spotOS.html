@@ -12,8 +12,10 @@
             font-family: 'SF Pro Display', sans-serif;
             background-image: url('https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/bg.jpg');
             background-size: cover; 
-            transition: background-image 0.4s ease-in-out;
+            transition: background-image 0.4s ease;
             border: none; 
+            overflow: hidden;
+            
         }
 
 
@@ -151,7 +153,8 @@
             width: 500px;
             height: 500px;
             border: none;
-        }
+            overflow: auto;      
+ }
 
         .overlay3 {
             display: none;
@@ -373,10 +376,10 @@ text-decoration: none;
 font-size: 30px;
             }
 
- .wetdiv {
+ #wetdiv {
             position: absolute;
-            top: 75%;
-            left: 86.9%;
+            top: 75%
+            left: 86.9%
             transform: translate(-50%, -50%);
 
             display: table;
@@ -414,6 +417,14 @@ left: 280px;
 top: 116px;
  }
 
+.pos {
+  border: none;
+height: 80px;
+  border-radius: 20px;
+   background-color: #383838;  
+  text-align: center;
+}
+
   /* Adjustments for smaller screens */
         @media screen and (max-width: 768px) {
             body {
@@ -437,6 +448,54 @@ top: 116px;
         .overlay2, .overlay3, .overlay4, .overlay5, .overlay6, .overlay7 {
             display: none;
         }
+  .move {
+      transition: all 0.5s ease; /* Smooth transition for position and size */
+      position: relative; /* Start with relative positioning */
+      margin-bottom: 5x; /* Add margin to create space between elements */
+    }
+
+    .moved-108 {
+      position: absolute;
+     top: 85%;
+     left: 17%;
+     transform: translate(-50%, -50%);
+      font-size: 140px !important; /* Set font size to 50px */
+       transition: all 0.5s ease; /* Smooth transition for position and size */
+    }
+
+    .moved-90 {
+      position: absolute;
+      top: 72%;
+     left: 17%;
+     transform: translate(-50%, -50%);
+      font-size: 30px !important; /* Set font size to 70px */
+        transition: all 0.5s ease; /* Smooth transition for position and size */
+    }
+.moved-wetdiv {
+      position: absolute;
+      top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+
+      font-size: 30px !important; /* Set font size to 30px */
+    }
+
+    .resize-108 {
+      font-size: 108px; /* Initial font size */
+    }
+
+    .resize-90 {
+      font-size: 90px; /* Initial font size */
+    }
+   
+    .resize-wetdiv {
+   top: 75%;
+            left: 86.9%;
+            transform: translate(-50%, -50%);
+
+    }
+
     </style>
 </head>
 <body>
@@ -444,10 +503,10 @@ top: 116px;
 
 
     <br>
-    <div id="date"></div>
-    <div id="clock"></div>
+    <div class="move resize-90 " id="date"></div>
+    <div class="move resize-108" id="clock"></div>
     <div id="vertical-line"></div>
-     <OL><OL><OL>
+     <OL><OL><OL> 
 </OL>
 
     <div id="popup">
@@ -476,7 +535,7 @@ top: 116px;
 
   <div style="background: rgba(45, 45, 45, 0.50); height: 200px; border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
-    border: none;" class="wetdiv">
+    border: none;" id="wetdiv" class="move resize-wetdiv">
    <div style="color: white; font-size: 20px; position: absolute; top: 9%; left: 10%;"  id="city-display"></div>
     <div id="weather-info"></div>
 
@@ -515,21 +574,25 @@ top: 116px;
 
  <h2>Collections</h2>
 ‎ ‎ ‎ ‎ ‎<img src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/bg.jpg" class="image-button" data-src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/bg.jpg">
-        <img src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/lala.jpg" class="image-button" data-src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/lala.jpg">
-<img src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/mnt.jpg" class="image-button" data-src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/mnt.jpg">
+        <img src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/bop.jpg" class="image-button" data-src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/bop.jpg">
+<img src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/OS15.jpg" class="image-button" data-src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/OS15.jpg">
+<h2>Abstract</h2>
         
-        <br><BR>
-<BR>
-‎ ‎ ‎ ‎ <img src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/bop.jpg" class="image-button" data-src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/bop.jpg">
+        
+‎ ‎ ‎ ‎ <img src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/lala.jpg" class="image-button" data-src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/lala.jpg">
         <img src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/15.jpg" class="image-button" data-src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/15.jpg">
         <img src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/lol.jpg" class="image-button" data-src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/lol.jpg">
+<h2>Gradient</h2>
+
+‎ ‎ ‎ ‎ ‎<img src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/22.jpg" class="image-button" data-src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/22.jpg">
+        <img src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/gradi.jpg" class="image-button" data-src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/gradi.jpg">
+        <img src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/gradi2.jpg" class="image-button" data-src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/gradi2.jpg">
         <h2>Always on Display</h2>
 <h3>disable backgrounds</h3>
 <h3>to preserve battery life.</h3>
 
-<img style="position: relative; top: -130px; left: 250px; width: 200px; height: 110px;" src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/tree.jpg" class="image-button" data-src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/tree.jpg">
+<img style="position: absolute; top: 620px; left: 270px; width: 220px; height: 130px;" src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/tree.jpg" class="image-button" data-src="https://raw.githubusercontent.com/ca1ebb/spotOS-1.0/main/tree.jpg">
 
-        <br>
        </div>
     </div>
 
@@ -606,6 +669,17 @@ top: 116px;
 </div>
 <h2 style="position: absolute; left: 120px; top: 250px;">Light</h2>
 <h2 style="position: absolute; left: 370px; top: 250px;">Dark</h2>
+
+
+<h3 style="position: absolute; top: 310px;">POSITION ON SCREEN</h3>
+<br>
+<h2 style="position: absolute; left: 70px; top: 355px; id="button-like-h1" role="button" tabindex="0" onclick="moveAndResize()">Bottom Left Corner</h2>
+<br>
+<h2 style="position: absolute; left: 360px; top: 355px; id="button-like-h1" role="button" tabindex="0" onclick="reset()">Center</h2>
+
+<div class="pos">
+
+</div>
        </div>
     </div>
 
@@ -942,6 +1016,14 @@ changeColorButton.addEventListener('click', function() {
         settingsPopup.style.backgroundColor = '#383838'; // Change this to any color you want for .settings background
     });
 
+// Change the color of text inside .pos to a different color
+    const posDivs = document.querySelectorAll('.pos'); // Select all elements with .pos class
+    posDivs.forEach(function(posDiv) {
+        posDiv.style.color = 'white'; // Change this to any color you want for text inside .pos
+        posDiv.style.backgroundColor = '#383838'; // Change this to any color you want for .pos background
+    });
+
+
    // Change the color of text inside .ap to a different color
     const apDivs = document.querySelectorAll('.ap'); // Select all elements with .ap class
     apDivs.forEach(function(apDiv) {
@@ -949,6 +1031,11 @@ changeColorButton.addEventListener('click', function() {
         apDiv.style.backgroundColor = '#383838'; // Change this to any color you want for .ap background
     });
 });
+
+
+
+
+
 
 const changeColorButton2 = document.getElementById('changeColorButton2'); // Changed the variable name to changeColorButton2
 changeColorButton2.addEventListener('click', function() {
@@ -976,13 +1063,23 @@ changeColorButton2.addEventListener('click', function() {
         settingsPopup.style.backgroundColor = '#D4D4D4'; // Change this to any color you want for .settings background
     });
 
+// Change the color of text inside .pos to a different color
+    const posDivs = document.querySelectorAll('.pos'); // Select all elements with .pos class
+    posDivs.forEach(function(posDiv) {
+        posDiv.style.color = 'black'; // Change this to any color you want for text inside .pos
+        posDiv.style.backgroundColor = '#D4D4D4'; // Change this to any color you want for .pos background
+    });
+
    // Change the color of text inside .ap to a different color
     const apDivs = document.querySelectorAll('.ap'); // Select all elements with .ap class
     apDivs.forEach(function(apDiv) {
-        apDiv.style.color = 'white'; // Change this to any color you want for text inside .ap
+        apDiv.style.color = 'black'; // Change this to any color you want for text inside .ap
         apDiv.style.backgroundColor = '#D4D4D4'; // Change this to any color you want for .ap background
     });
 });
+
+
+
   function updateCityName() {
             // Fetch the user's location using ipinfo.io with your access token
             fetch('https://ipinfo.io/json?token=287532b89b47e5')
@@ -1122,7 +1219,7 @@ changeColorButton2.addEventListener('click', function() {
                     weatherInfo.innerHTML = `
                         <p style="color: white; position: absolute; font-size: 50px; top: -5%; left: 11%;">${roundedTemp}°</p>
                         <p style="color: white; position: absolute; font-size: 15px; top: 80%; left: 13.3%;"> H: ${roundedMaxTemp}°</p>
-                        <p style="color: white; position: absolute; font-size: 15px; top: 80%; left: 40%;">L:${roundedMinTemp}°</p>
+                        <p style="color: white; position: absolute; font-size: 15px; top: 80%; left: 40%;">L: ${roundedMinTemp}°</p>
                         <p style="color: white; position: absolute; font-size: 20px; top: 63%; left: 13.3%;">${conditionText}</p>
                     `;
                 })
@@ -1140,8 +1237,37 @@ changeColorButton2.addEventListener('click', function() {
 updateWeather();
 
 setInterval(updateWeather, 600000);
+    var isMoved = false;
 
+    function moveAndResize() {
+      var resize108 = document.querySelector('.resize-108'); // Select the element with class 'resize-108'
+      var resize90 = document.querySelector('.resize-90'); // Select the element with class 'resize-90'
+      var resizeOther = document.querySelector('.resize-other'); // Select the element with class 'resize-other'
+      
+      if (!isMoved) {
+        resize108.classList.add('moved-108'); // Add 'moved-108' class to move and resize element
+        resize90.classList.add('moved-90'); // Add 'moved-90' class to move and resize element
+        resizeOther.classList.add('moved-other'); // Add 'moved-other' class to move and resize element
+      } else {
+        resize108.classList.remove('moved-108'); // Remove 'moved-108' class to reset position and size
+        resize90.classList.remove('moved-90'); // Remove 'moved-90' class to reset position and size
+        resizeOther.classList.remove('moved-other'); // Remove 'moved-other' class to reset position and size
+      }
 
+      isMoved = !isMoved; // Toggle isMoved value
+    }
+
+    function reset() {
+      var resize108 = document.querySelector('.resize-108'); // Select the element with class 'resize-108'
+      var resize90 = document.querySelector('.resize-90'); // Select the element with class 'resize-90'
+      var resizeOther = document.querySelector('.resize-other'); // Select the element with class 'resize-other'
+      
+      resize108.classList.remove('moved-108'); // Remove 'moved-108' class to reset position and size
+      resize90.classList.remove('moved-90'); // Remove 'moved-90' class to reset position and size
+      resizeOther.classList.remove('moved-other'); // Remove 'moved-other' class to reset position and size
+      
+      isMoved = false; // Reset isMoved value
+    }
     </script>
 </body>
 </html>
